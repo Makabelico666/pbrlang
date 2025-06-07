@@ -1,0 +1,39 @@
+[package]
+name = "pbrlang"
+version = "0.1.0"
+edition = "2024"
+description = "PBRLang - A Primeira Linguagem de Programação Totalmente Brasileira"
+authors = ["Equipe PBRLang"]
+repository = "https://github.com/pbrlang/pbrlang"
+license = "MIT"
+readme = "README.md"
+keywords = ["language", "compiler", "transpiler", "brazilian", "portuguese"]
+categories = ["command-line-utilities", "compilers", "development-tools"]
+
+[dependencies]
+# Parsing and grammar handling
+pest = "2.7"
+pest_derive = "2.7"
+logos = "0.13"
+
+# Command-line interface
+clap = { version = "4.4", features = ["derive"] }
+
+# Error handling
+anyhow = "1.0"
+thiserror = "1.0"
+
+# Utilities
+colored = "2.0"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tempfile = "3.8"
+
+# Path handling and file operations
+glob = "0.3"
+fs_extra = "1.3"
+dirs = "5.0"
+
+[dev-dependencies]
+pretty_assertions = "1.4"
+insta = "1.34"
