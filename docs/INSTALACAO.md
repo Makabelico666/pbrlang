@@ -163,7 +163,7 @@ A PBRLang requer:
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/pbrlang/pbrlang.git
+   git clone https://github.com/makabelico666/pbrlang.git
    cd pbrlang
    ```
 
