@@ -1,0 +1,101 @@
+// Gramática PBRLang usando Pest PEG
+// https://pest.rs/
+
+// Regras básicas
+WHITESPACE = _{ " " | "\t" | "\r" | "\n" }
+COMMENT = _{ "//" ~ (!"\n" ~ ANY)* ~ "\n" }
+
+// Identificadores
+identificador = @{ (ASCII_ALPHA | "á" | "é" | "í" | "ó" | "ú" | "â" | "ê" | "ô" | "ã" | "õ" | "ç" | "_") ~ (ASCII_ALPHANUMERIC | "á" | "é" | "í" | "ó" | "ú" | "â" | "ê" | "ô" | "ã" | "õ" | "ç" | "_")* }
+
+// Literais
+texto_literal = @{ texto_simples | texto_multilinha | texto_interpolado }
+texto_simples = @{ "\"" ~ (!"\"" ~ ANY)* ~ "\"" }
+texto_multilinha = @{ "\"\"\"" ~ ((!"\"\"\"" ~ ANY)*)? ~ "\"\"\"" }
+texto_interpolado = @{ "\"" ~ (texto_parte | interpolacao)* ~ "\"" }
+texto_parte = @{ (!"\"" ~ !"${" ~ ANY)+ }
+interpolacao = @{ "${" ~ expressao ~ "}" }
+numero_literal = @{ ASCII_DIGIT+ ~ ("." ~ ASCII_DIGIT+)? }
+logico_literal = @{ "verdadeiro" | "falso" }
+nada_literal = @{ "nada" }
+lista_literal = @{ "[" ~ (expressao ~ ("," ~ expressao)*)? ~ "]" }
+dicionario_literal = @{ "{" ~ (par_chave_valor ~ ("," ~ par_chave_valor)*)? ~ "}" }
+par_chave_valor = { expressao ~ ":" ~ expressao }
+
+// Tipos
+tipo = { "texto" | "número" | "numero" | "lógico" | "logico" | identificador }
+
+// Expressões
+expressao = { atribuicao }
+
+atribuicao = { or_expr ~ ("=" ~ atribuicao)? }
+or_expr = { and_expr ~ ("ou" ~ and_expr)* }
+and_expr = { comparacao ~ ("e" ~ comparacao)* }
+
+comparacao = { soma ~ (op_comparacao ~ soma)? }
+op_comparacao = { ">" | ">=" | "<" | "<=" | "==" | "!=" | "é igual a" | "em" }
+
+soma = { termo ~ (("+"|"-") ~ termo)* }
+termo = { fator ~ (("*"|"/"|"resto"|"%") ~ fator)* }
+fator = { 
+    texto_literal | 
+    numero_literal | 
+    logico_literal | 
+    nada_literal | 
+    lista_literal |
+    dicionario_literal |
+    chamada | 
+    acesso_membro | 
+    identificador | 
+    "(" ~ expressao ~ ")" |
+    ("!" | "não") ~ fator
+}
+
+chamada = { identificador ~ "(" ~ (expressao ~ ("," ~ expressao)*)? ~ ")" }
+acesso_membro = { identificador ~ "." ~ identificador }
+
+// Declarações
+declaracao = {
+    declaracao_variavel |
+    declaracao_funcao |
+    declaracao_retorno |
+    declaracao_condicional |
+    declaracao_para_cada |
+    declaracao_enquanto |
+    declaracao_repita |
+    declaracao_pare |
+    declaracao_continue |
+    declaracao_quando_der_erro |
+    declaracao_modelo |
+    declaracao_modulo |
+    declaracao_importar |
+    declaracao_mostrar |
+    expressao ~ ";"
+}
+
+declaracao_variavel = { modificador_visibilidade? ~ "pense" ~ identificador ~ (":" ~ tipo)? ~ ("=" ~ expressao)? ~ ";" }
+declaracao_funcao = { modificador_visibilidade? ~ "faça" ~ identificador ~ "(" ~ parametros? ~ ")" ~ ("->" ~ tipo)? ~ bloco }
+parametros = { parametro ~ ("," ~ parametro)* }
+parametro = { identificador ~ ":" ~ tipo }
+modificador_visibilidade = { "público" | "publico" }
+
+declaracao_retorno = { "volte" ~ expressao? ~ ";" }
+declaracao_condicional = { "se" ~ expressao ~ bloco ~ ("senão" ~ bloco)? }
+declaracao_para_cada = { "para" ~ "cada" ~ identificador ~ "de" ~ expressao ~ "até" ~ expressao ~ bloco }
+declaracao_enquanto = { "enquanto" ~ expressao ~ bloco }
+declaracao_repita = { "repita" ~ bloco ~ "até" ~ expressao ~ ";" }
+declaracao_pare = { "pare" ~ ";" }
+declaracao_continue = { "continue" ~ ";" }
+declaracao_quando_der_erro = { "quando" ~ "der" ~ "erro" ~ bloco ~ "se" ~ "falhar" ~ "com" ~ identificador ~ bloco }
+declaracao_modelo = { modificador_visibilidade? ~ "modelo" ~ identificador ~ "{" ~ (campo ~ ";")* ~ "}" }
+campo = { modificador_visibilidade? ~ identificador ~ ":" ~ tipo }
+declaracao_modulo = { "módulo" | "modulo" | "caixote" ~ identificador ~ bloco }
+declaracao_importar = { ("use" | "importar") ~ caminho_modulo ~ ";" }
+caminho_modulo = { identificador ~ ("." ~ identificador)* }
+declaracao_mostrar = { "mostre" ~ expressao ~ ";" }
+
+bloco = { "{" ~ declaracao* ~ "}" }
+
+// Programa completo
+programa = { SOI ~ declaracao* ~ EOI }
+
