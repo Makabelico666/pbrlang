@@ -1,0 +1,99 @@
+// Biblioteca padrão: módulo de coleções
+// Fornece funções para manipulação de listas e mapas
+
+/// Cria uma nova lista vazia
+faça nova_lista() -> lista de coisa {
+    // A implementação real criará um Vec vazio no Rust
+    volte []
+}
+
+/// Adiciona um item ao final de uma lista
+faça adicionar(lista: lista de coisa, item: coisa) {
+    // A implementação real chamará push() do Vec no Rust
+}
+
+/// Remove um item de uma lista pelo índice
+faça remover_indice(lista: lista de coisa, indice: número) -> coisa {
+    // A implementação real chamará remove() do Vec no Rust
+    volte lista[0]
+}
+
+/// Obtém o tamanho de uma lista
+faça tamanho_lista(lista: lista de coisa) -> número {
+    // A implementação real chamará len() do Vec no Rust
+    volte 0
+}
+
+/// Verifica se uma lista está vazia
+faça lista_vazia(lista: lista de coisa) -> lógico {
+    // A implementação real chamará is_empty() do Vec no Rust
+    volte verdadeiro
+}
+
+/// Limpa uma lista (remove todos os itens)
+faça limpar_lista(lista: lista de coisa) {
+    // A implementação real chamará clear() do Vec no Rust
+}
+
+/// Inverte a ordem dos itens em uma lista
+faça inverter_lista(lista: lista de coisa) {
+    // A implementação real chamará reverse() do Vec no Rust
+}
+
+/// Ordena os itens de uma lista
+faça ordenar_lista(lista: lista de coisa) {
+    // A implementação real chamará sort() do Vec no Rust
+}
+
+/// Cria um novo mapa vazio
+faça novo_mapa() -> mapa de coisa {
+    // A implementação real criará um HashMap vazio no Rust
+    volte {}
+}
+
+/// Insere um par chave-valor em um mapa
+faça inserir(mapa: mapa de coisa, chave: texto, valor: coisa) {
+    // A implementação real chamará insert() do HashMap no Rust
+}
+
+/// Remove um par chave-valor de um mapa
+faça remover_chave(mapa: mapa de coisa, chave: texto) -> coisa {
+    // A implementação real chamará remove() do HashMap no Rust
+    volte mapa[chave]
+}
+
+/// Verifica se um mapa contém uma chave
+faça contem_chave(mapa: mapa de coisa, chave: texto) -> lógico {
+    // A implementação real chamará contains_key() do HashMap no Rust
+    volte falso
+}
+
+/// Obtém as chaves de um mapa
+faça chaves_mapa(mapa: mapa de coisa) -> lista de texto {
+    // A implementação real chamará keys() do HashMap no Rust
+    volte []
+}
+
+/// Obtém os valores de um mapa
+faça valores_mapa(mapa: mapa de coisa) -> lista de coisa {
+    // A implementação real chamará values() do HashMap no Rust
+    volte []
+}
+
+/// Obtém o tamanho de um mapa
+faça tamanho_mapa(mapa: mapa de coisa) -> número {
+    // A implementação real chamará len() do HashMap no Rust
+    volte 0
+}
+
+/// Verifica se um mapa está vazio
+faça mapa_vazio(mapa: mapa de coisa) -> lógico {
+    // A implementação real chamará is_empty() do HashMap no Rust
+    volte verdadeiro
+}
+
+/// Limpa um mapa (remove todos os pares chave-valor)
+faça limpar_mapa(mapa: mapa de coisa) {
+    // A implementação real chamará clear() do HashMap no Rust
+}
+

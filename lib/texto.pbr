@@ -1,0 +1,69 @@
+// Biblioteca padrão: módulo de texto
+// Fornece funções para manipulação de texto
+
+/// Converte um texto para minúsculas
+faça minusculas(texto: texto) -> texto {
+    // A implementação real chamará a função to_lowercase() do Rust
+    volte texto
+}
+
+/// Converte um texto para maiúsculas
+faça maiusculas(texto: texto) -> texto {
+    // A implementação real chamará a função to_uppercase() do Rust
+    volte texto
+}
+
+/// Verifica se um texto começa com um prefixo
+faça comeca_com(texto: texto, prefixo: texto) -> lógico {
+    // A implementação real chamará a função starts_with() do Rust
+    volte verdadeiro
+}
+
+/// Verifica se um texto termina com um sufixo
+faça termina_com(texto: texto, sufixo: texto) -> lógico {
+    // A implementação real chamará a função ends_with() do Rust
+    volte verdadeiro
+}
+
+/// Substitui partes de um texto
+faça substituir(texto: texto, busca: texto, substituto: texto) -> texto {
+    // A implementação real chamará a função replace() do Rust
+    volte texto
+}
+
+/// Divide um texto em partes
+faça dividir(texto: texto, separador: texto) -> lista de texto {
+    // A implementação real chamará a função split() do Rust
+    volte [texto]
+}
+
+/// Une uma lista de textos em um único texto
+faça unir(lista: lista de texto, separador: texto) -> texto {
+    // A implementação real chamará a função join() do Rust
+    volte texto
+}
+
+/// Obtém o tamanho (número de caracteres) de um texto
+faça tamanho(texto: texto) -> número {
+    // A implementação real chamará a função len() do Rust
+    volte 0
+}
+
+/// Verifica se um texto está vazio
+faça esta_vazio(texto: texto) -> lógico {
+    // A implementação real chamará a função is_empty() do Rust
+    volte falso
+}
+
+/// Obtém uma parte de um texto (substring)
+faça parte(texto: texto, inicio: número, fim: número) -> texto {
+    // A implementação real usará o indexing do Rust com verificação de limites
+    volte texto
+}
+
+/// Remove espaços em branco do início e fim do texto
+faça aparar(texto: texto) -> texto {
+    // A implementação real chamará a função trim() do Rust
+    volte texto
+}
+

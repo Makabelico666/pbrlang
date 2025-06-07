@@ -1,0 +1,69 @@
+// Biblioteca padrão: módulo web
+// Fornece funções para interação com a web
+
+/// Realiza uma requisição HTTP GET
+faça obter(url: texto) -> texto {
+    // A implementação real chamará a biblioteca reqwest do Rust
+    volte ""
+}
+
+/// Realiza uma requisição HTTP POST
+faça postar(url: texto, corpo: texto) -> texto {
+    // A implementação real chamará a biblioteca reqwest do Rust
+    volte ""
+}
+
+/// Realiza uma requisição HTTP PUT
+faça colocar(url: texto, corpo: texto) -> texto {
+    // A implementação real chamará a biblioteca reqwest do Rust
+    volte ""
+}
+
+/// Realiza uma requisição HTTP DELETE
+faça deletar(url: texto) -> texto {
+    // A implementação real chamará a biblioteca reqwest do Rust
+    volte ""
+}
+
+/// Codifica um texto para URL (url encoding)
+faça codificar_url(texto: texto) -> texto {
+    // A implementação real chamará a biblioteca url do Rust
+    volte ""
+}
+
+/// Decodifica um texto de URL (url decoding)
+faça decodificar_url(texto: texto) -> texto {
+    // A implementação real chamará a biblioteca url do Rust
+    volte ""
+}
+
+/// Codifica um objeto para JSON
+faça para_json(objeto: coisa) -> texto {
+    // A implementação real chamará a biblioteca serde_json do Rust
+    volte ""
+}
+
+/// Decodifica um texto JSON para um objeto
+faça de_json(texto: texto) -> coisa {
+    // A implementação real chamará a biblioteca serde_json do Rust
+    volte ""
+}
+
+/// Verifica se uma URL é válida
+faça url_valida(url: texto) -> lógico {
+    // A implementação real chamará a biblioteca url do Rust
+    volte verdadeiro
+}
+
+/// Obtém o código de status de uma URL
+faça obter_status(url: texto) -> número {
+    // A implementação real chamará a biblioteca reqwest do Rust
+    volte 200
+}
+
+/// Faz download de um arquivo da web
+faça baixar_arquivo(url: texto, caminho_destino: texto) -> lógico {
+    // A implementação real chamará as bibliotecas reqwest e fs do Rust
+    volte verdadeiro
+}
+

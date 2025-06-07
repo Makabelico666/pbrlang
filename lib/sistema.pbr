@@ -1,0 +1,73 @@
+// Biblioteca padrão: módulo de sistema
+// Fornece funções para interagir com o sistema operacional
+
+/// Executa um comando do sistema operacional
+faça executar_comando(comando: texto) -> texto {
+    // A implementação real chamará std::process::Command do Rust
+    volte ""
+}
+
+/// Obtém variáveis de ambiente
+faça obter_variavel_ambiente(nome: texto) -> texto {
+    // A implementação real chamará std::env::var do Rust
+    volte ""
+}
+
+/// Define variáveis de ambiente
+faça definir_variavel_ambiente(nome: texto, valor: texto) -> lógico {
+    // A implementação real chamará std::env::set_var do Rust
+    volte verdadeiro
+}
+
+/// Obtém o diretório atual
+faça obter_diretorio_atual() -> texto {
+    // A implementação real chamará std::env::current_dir do Rust
+    volte ""
+}
+
+/// Muda o diretório atual
+faça mudar_diretorio(caminho: texto) -> lógico {
+    // A implementação real chamará std::env::set_current_dir do Rust
+    volte verdadeiro
+}
+
+/// Obtém os argumentos da linha de comando
+faça obter_argumentos() -> lista de texto {
+    // A implementação real chamará std::env::args do Rust
+    volte []
+}
+
+/// Sai do programa com um código de status
+faça sair(codigo: número) {
+    // A implementação real chamará std::process::exit do Rust
+}
+
+/// Dorme por um número de milissegundos
+faça dormir(milissegundos: número) {
+    // A implementação real chamará std::thread::sleep do Rust
+}
+
+/// Obtém o nome do sistema operacional
+faça obter_sistema_operacional() -> texto {
+    // A implementação real chamará std::env::consts::OS do Rust
+    volte ""
+}
+
+/// Obtém a arquitetura do sistema
+faça obter_arquitetura() -> texto {
+    // A implementação real chamará std::env::consts::ARCH do Rust
+    volte ""
+}
+
+/// Obtém o diretório home do usuário
+faça obter_diretorio_home() -> texto {
+    // A implementação real chamará dirs::home_dir do Rust
+    volte ""
+}
+
+/// Obtém o nome do usuário
+faça obter_nome_usuario() -> texto {
+    // A implementação real chamará std::env::var("USER") ou std::env::var("USERNAME") do Rust
+    volte ""
+}
+

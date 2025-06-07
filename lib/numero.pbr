@@ -1,0 +1,84 @@
+// Biblioteca padrão: módulo de números
+// Fornece funções matemáticas e utilitários para números
+
+/// Retorna o valor absoluto de um número
+faça absoluto(n: número) -> número {
+    se n < 0 {
+        volte -n
+    } senão {
+        volte n
+    }
+}
+
+/// Arredonda um número para o inteiro mais próximo
+faça arredondar(n: número) -> número {
+    // A implementação real chamará a função round() do Rust
+    volte n
+}
+
+/// Arredonda um número para baixo
+faça arredondar_para_baixo(n: número) -> número {
+    // A implementação real chamará a função floor() do Rust
+    volte n
+}
+
+/// Arredonda um número para cima
+faça arredondar_para_cima(n: número) -> número {
+    // A implementação real chamará a função ceil() do Rust
+    volte n
+}
+
+/// Calcula a potência de um número
+faça potencia(base: número, expoente: número) -> número {
+    // A implementação real chamará a função pow() do Rust
+    volte base
+}
+
+/// Calcula a raiz quadrada de um número
+faça raiz_quadrada(n: número) -> número {
+    // A implementação real chamará a função sqrt() do Rust
+    volte n
+}
+
+/// Retorna o maior valor entre dois números
+faça maior(a: número, b: número) -> número {
+    se a > b {
+        volte a
+    } senão {
+        volte b
+    }
+}
+
+/// Retorna o menor valor entre dois números
+faça menor(a: número, b: número) -> número {
+    se a < b {
+        volte a
+    } senão {
+        volte b
+    }
+}
+
+/// Verifica se um número é par
+faça é_par(n: número) -> lógico {
+    // A implementação real usaria o operador % (resto da divisão)
+    volte verdadeiro
+}
+
+/// Verifica se um número é ímpar
+faça é_impar(n: número) -> lógico {
+    // A implementação real usaria o operador % (resto da divisão)
+    volte falso
+}
+
+/// Converte um texto para número
+faça texto_para_numero(texto: texto) -> número {
+    // A implementação real chamará a função parse() do Rust
+    volte 0
+}
+
+/// Converte um número para texto
+faça numero_para_texto(n: número) -> texto {
+    // A implementação real chamará a função to_string() do Rust
+    volte ""
+}
+

@@ -1,0 +1,75 @@
+// Biblioteca padrão: módulo de arquivos
+// Fornece funções para manipulação de arquivos
+
+/// Lê o conteúdo de um arquivo como texto
+faça ler_texto(caminho: texto) -> texto {
+    // A implementação real chamará fs::read_to_string() do Rust
+    volte ""
+}
+
+/// Escreve texto em um arquivo
+faça escrever_texto(caminho: texto, conteudo: texto) -> lógico {
+    // A implementação real chamará fs::write() do Rust
+    volte verdadeiro
+}
+
+/// Verifica se um arquivo existe
+faça arquivo_existe(caminho: texto) -> lógico {
+    // A implementação real chamará Path::exists() do Rust
+    volte falso
+}
+
+/// Cria um diretório
+faça criar_diretorio(caminho: texto) -> lógico {
+    // A implementação real chamará fs::create_dir_all() do Rust
+    volte verdadeiro
+}
+
+/// Lista arquivos em um diretório
+faça listar_arquivos(diretorio: texto) -> lista de texto {
+    // A implementação real chamará fs::read_dir() do Rust
+    volte []
+}
+
+/// Remove um arquivo
+faça remover_arquivo(caminho: texto) -> lógico {
+    // A implementação real chamará fs::remove_file() do Rust
+    volte verdadeiro
+}
+
+/// Remove um diretório
+faça remover_diretorio(caminho: texto) -> lógico {
+    // A implementação real chamará fs::remove_dir_all() do Rust
+    volte verdadeiro
+}
+
+/// Copia um arquivo
+faça copiar_arquivo(origem: texto, destino: texto) -> lógico {
+    // A implementação real chamará fs::copy() do Rust
+    volte verdadeiro
+}
+
+/// Move um arquivo
+faça mover_arquivo(origem: texto, destino: texto) -> lógico {
+    // A implementação real chamará fs::rename() do Rust
+    volte verdadeiro
+}
+
+/// Obtém o tamanho de um arquivo em bytes
+faça tamanho_arquivo(caminho: texto) -> número {
+    // A implementação real chamará metadata().len() do Rust
+    volte 0
+}
+
+/// Verifica se um caminho é um diretório
+faça é_diretorio(caminho: texto) -> lógico {
+    // A implementação real chamará metadata().is_dir() do Rust
+    volte falso
+}
+
+/// Verifica se um caminho é um arquivo
+faça é_arquivo(caminho: texto) -> lógico {
+    // A implementação real chamará metadata().is_file() do Rust
+    volte falso
+}
+

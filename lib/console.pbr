@@ -1,0 +1,75 @@
+// Biblioteca padrão: módulo de console
+// Fornece funções para interação com o console
+
+/// Lê uma linha de texto do console
+faça ler_linha() -> texto {
+    // A implementação real chamará stdin().read_line() do Rust
+    volte ""
+}
+
+/// Lê um número do console
+faça ler_numero() -> número {
+    // A implementação real chamará stdin().read_line() e parse() do Rust
+    volte 0
+}
+
+/// Exibe texto no console
+faça exibir(texto: texto) {
+    // A implementação real chamará print!() do Rust
+    mostre texto
+}
+
+/// Exibe texto no console com uma nova linha no final
+faça exibir_linha(texto: texto) {
+    // A implementação real chamará println!() do Rust
+    mostre texto
+}
+
+/// Limpa a tela do console
+faça limpar_tela() {
+    // A implementação real chamará comando específico do sistema
+}
+
+/// Exibe texto colorido no console
+faça exibir_colorido(texto: texto, cor: texto) {
+    // A implementação real chamará a biblioteca colored do Rust
+    mostre texto
+}
+
+/// Exibe um menu e obtém a escolha do usuário
+faça exibir_menu(titulo: texto, opcoes: lista de texto) -> número {
+    mostre titulo
+    
+    para cada i de 0 até tamanho_lista(opcoes) - 1 {
+        mostre (i + 1) + ") " + opcoes[i]
+    }
+    
+    mostre "Escolha uma opção: "
+    volte ler_numero()
+}
+
+/// Exibe uma barra de progresso
+faça exibir_progresso(atual: número, total: número, largura: número) {
+    // Calcula a porcentagem
+    pense porcentagem = (atual / total) * 100
+    
+    // Calcula quantos caracteres devem ser preenchidos
+    pense caracteres_preenchidos = (atual * largura) / total
+    
+    // Cria a barra
+    pense barra = "["
+    
+    para cada i de 0 até largura - 1 {
+        se i < caracteres_preenchidos {
+            barra = barra + "="
+        } senão {
+            barra = barra + " "
+        }
+    }
+    
+    barra = barra + "] " + porcentagem + "%"
+    
+    // Exibe a barra
+    mostre barra
+}
+
