@@ -1,0 +1,111 @@
+// Módulo principal do programa
+módulo principal {
+    // Importação de outro módulo
+    use sistema.io;
+
+    // Modelo de dados
+    público modelo Pessoa {
+        público nome: texto;
+        público idade: número;
+    }
+
+    // Função de soma como exemplo de função com retorno tipado
+    público faça calcular_soma(a: número, b: número) -> número {
+        volte a + b;
+    }
+
+    // Função principal
+    público faça principal() {
+        // Variáveis com diferentes tipos
+        pense nome = "João";
+        pense idade = 25;
+        pense ativo = verdadeiro;
+        
+        // Lista e dicionário
+        pense números = [1, 2, 3, 4, 5];
+        pense dados = {
+            "nome": nome,
+            "idade": idade
+        };
+
+        // Estruturas de controle
+        se idade >= 18 {
+            mostre "Maior de idade";
+        } senão {
+            mostre "Menor de idade";
+        }
+
+        // Loop para cada com continue e pare
+        para cada i de 1 até 10 {
+            se i == 3 {
+                continue;  // Pula o número 3
+            }
+            
+            se i == 7 {
+                pare;  // Para no número 7
+            }
+            
+            mostre "Valor: " + i;
+        }
+
+        // Loop enquanto
+        pense contador = 0;
+        enquanto contador < 3 {
+            mostre contador;
+            contador = contador + 1;
+        }
+
+        // Loop repita
+        repita {
+            mostre "Executando...";
+            contador = contador + 1;
+        } até contador >= 5;
+
+        // Tratamento de erros
+        quando der erro {
+            pense arquivo = abrir_arquivo("dados.txt");
+            mostre arquivo;
+        } se falhar com erro {
+            mostre "Erro ao abrir arquivo: " + erro.mensagem;
+        }
+
+        // String com interpolação
+        pense mensagem = "Olá, ${nome}! Você tem ${idade} anos.";
+        mostre mensagem;
+
+        // String multilinha
+        pense texto = """
+            Este é um texto
+            com múltiplas
+            linhas.
+        """;
+        mostre texto;
+
+        // Operadores lógicos
+        se ativo e idade > 20 {
+            mostre "Usuário ativo e maior que 20 anos";
+        }
+
+        se nome == "João" ou nome == "Maria" {
+            mostre "Nome comum no Brasil";
+        }
+
+        // Demonstração de operadores
+        pense a = 5 + 3 * 2;        // Operadores aritméticos
+        pense b = 10 resto 3;       // Operador resto
+        pense c = não verdadeiro;   // Operador lógico não
+        pense d = 3 em números;     // Operador de contenção
+        pense e = a > b e b < 10;   // Operadores relacionais e lógicos
+
+        // Criação e uso de modelo
+        pense pessoa = nova Pessoa();
+        pessoa.nome = "Maria";
+        pessoa.idade = 30;
+        mostre "Pessoa: " + pessoa.nome + ", " + pessoa.idade;
+
+        // Chamada de função com retorno
+        pense resultado = calcular_soma(10, 20);
+        mostre "Soma: " + resultado;
+    }
+}
+
