@@ -1,0 +1,1 @@
+C:\Users\Pichau\pbrlang\target\debug\pbrlang.exe: C:\Users\Pichau\pbrlang\src\ast.rs C:\Users\Pichau\pbrlang\src\grammar.pest C:\Users\Pichau\pbrlang\src\lexer.rs C:\Users\Pichau\pbrlang\src\main.rs C:\Users\Pichau\pbrlang\src\parser.rs C:\Users\Pichau\pbrlang\src\transpiler.rs
