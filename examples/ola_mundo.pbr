@@ -1,0 +1,13 @@
+// Meu primeiro programa em PBRLang!
+
+// Exibe uma mensagem de boas-vindas
+mostre "Olá, mundo!"
+
+// Exemplo de função
+faça saudacao(nome: texto) {
+    mostre "Olá, " + nome + "! Bem-vindo à PBRLang!"
+}
+
+// Exemplo de uso da função
+saudacao("Programador")
+

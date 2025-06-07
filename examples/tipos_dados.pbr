@@ -1,0 +1,42 @@
+// Exemplo de tipos de dados em PBRLang
+// Este exemplo demonstra os diferentes tipos de dados disponíveis
+
+// Tipos básicos
+pense texto_exemplo: texto = "Isso é um texto"
+pense numero_inteiro: número = 42
+pense numero_decimal: número = 3.14159
+pense verdadeiro_exemplo: lógico = verdadeiro
+pense falso_exemplo: lógico = falso
+
+// Exibindo os valores
+mostre "Texto: " + texto_exemplo
+mostre "Número inteiro: " + numero_inteiro
+mostre "Número decimal: " + numero_decimal
+mostre "Valor verdadeiro: " + verdadeiro_exemplo
+mostre "Valor falso: " + falso_exemplo
+
+// Operações com diferentes tipos
+pense soma = numero_inteiro + numero_decimal
+mostre "Soma: " + soma
+
+pense concatenacao = texto_exemplo + " e mais algum texto"
+mostre "Concatenação: " + concatenacao
+
+// Usando funções com diferentes tipos
+faça exibir_tipo(valor: texto) {
+    mostre "O valor '" + valor + "' é do tipo texto"
+}
+
+faça exibir_tipo(valor: número) {
+    mostre "O valor " + valor + " é do tipo número"
+}
+
+faça exibir_tipo(valor: lógico) {
+    mostre "O valor " + valor + " é do tipo lógico"
+}
+
+// Chamando a função com diferentes tipos
+exibir_tipo(texto_exemplo)
+exibir_tipo(numero_inteiro)
+exibir_tipo(verdadeiro_exemplo)
+
